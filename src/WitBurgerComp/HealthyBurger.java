@@ -6,8 +6,8 @@ public class HealthyBurger extends Hamburger {
     private String healthyExtra2Name;
     private double healthyExtra2Price;
 
-    public HealthyBurger( String meat, double price, String breadRollType) {
-        super("HealthyBurger", meat, price, breadRollType);
+    public HealthyBurger(String name, double price, String breadRollType) {
+        super(name, "Tofu", price, breadRollType);
     }
 
     public HealthyBurger(String name, String meat, double price, String breadRollType, String healthyExtra1Name, double healthyExtra1Price) {
@@ -39,14 +39,19 @@ public class HealthyBurger extends Hamburger {
     }
 
     public void itemizeHamburger() {
-        double totalPrice = getPrice()+ getAddition1Price()+getAddition2Price()+getAddition3Price()+getAddition4Price()+healthyExtra1Price + healthyExtra2Price;
-        System.out.println(
-                "HealthyAddition1=> Name: " + healthyExtra1Name + "Price: " + healthyExtra1Price + "\n" +
-                        "HealthyAddition2=> Name: " + healthyExtra2Name + "Price: " + healthyExtra2Price + "\n" +
-
-                        "Toplam Ücret: " + totalPrice
 
 
-        );
+        StringBuilder builder = new StringBuilder();
+        if (healthyExtra1Name != null) {
+            builder.append("HealthyAddition1: " + healthyExtra1Name);
+            super.setPrice(getPrice() + healthyExtra1Price);
+        }
+        if (healthyExtra2Name != null) {
+            builder.append("HealthyAddition2: " + healthyExtra2Name);
+            super.setPrice(getPrice() + healthyExtra2Price);
+        }
+        super.itemizeHamburger();
+        System.out.println(builder);
+
     }
 }

@@ -1,8 +1,11 @@
 package WitBurgerComp;
 
+
+import java.text.DecimalFormat;
+
 public class Hamburger {
-  private   String name;
-    private  String meat;
+    private String name;
+    private String meat;
     private double price;
     private String breadRollType;
     private String addition1Name;
@@ -11,8 +14,8 @@ public class Hamburger {
     private double addition2Price;
     private String addition3Name;
     private double addition3Price;
-    private  String addition4Name;
-    private   double addition4Price;
+    private String addition4Name;
+    private double addition4Price;
 
     public Hamburger(String name, String meat, double price, String breadRollType) {
         this.name = name;
@@ -20,9 +23,10 @@ public class Hamburger {
         this.price = price;
         this.breadRollType = breadRollType;
     }
+
     public Hamburger(String name, double price, String breadRollType) {
         this.name = name;
-        this.meat = "normal";
+        this.meat = "Normal";
         this.price = price;
         this.breadRollType = breadRollType;
     }
@@ -162,17 +166,31 @@ public class Hamburger {
     }
 
     public void itemizeHamburger() {
-        double totalPrice = price+addition2Price+addition3Price+addition1Price+addition4Price;
-        System.out.println(
-                        "addition1=> Name: " + addition1Name + "Price: " + addition1Price + "\n" +
-                        "addition2=> Name: " + addition2Name + "Price: " + addition2Price + "\n" +
-                        "addition3=> Name: " + addition3Name + "Price: " + addition3Price + "\n" +
-                        "addition4=> Name: " + addition4Name + "Price: " + addition4Price + "\n" +
-                                "Toplam Ücret: " +totalPrice
+        StringBuilder builder = new StringBuilder();
+        builder.append("Name: " + getName() + "\n");
+        builder.append("Meat: " + getMeat() + "\n");
+        builder.append("BreadRollType: " + getBreadRollType() + "\n");
+        if (addition1Name != null) {
+            builder.append("Addition1: " + addition1Name );
+            price = price + getAddition1Price();
+
+        }
+        if (addition2Name != null) {
+            builder.append("\n"+"Addition2: " + addition2Name);
+            price = price + getAddition2Price();
+        }
+        if (addition3Name != null) {
+            builder.append("\n"+"Addition3: " + addition3Name );
+            price = price + getAddition3Price();
+        }
+        if (addition4Name != null) {
+            builder.append("\n"+"Addition4: " + addition4Name );
+            price = price + getAddition4Price();
+        }
+        DecimalFormat df = new DecimalFormat("#.##");
 
 
-
-        );
-
+        System.out.println(builder);
+        System.out.println("Price: " + df.format(getPrice()));
     }
 }

@@ -25,7 +25,7 @@ public class DeluxeBurger extends  Hamburger{
     }
 
     public DeluxeBurger( ) {
-        super("DeluxeBurger", "double", 19.10, " Double Sandwich");
+        super("DeluxeBurger", "Double", 19.10, "Double Sandwich");
 
 
     }
