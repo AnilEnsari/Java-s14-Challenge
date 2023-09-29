@@ -7,7 +7,7 @@ public class Hamburger {
     private String name;
     private String meat;
     private double price;
-    private String breadRollType;
+    private BreadRollType breadRollType;
     private String addition1Name;
     private double addition1Price;
     private String addition2Name;
@@ -17,21 +17,21 @@ public class Hamburger {
     private String addition4Name;
     private double addition4Price;
 
-    public Hamburger(String name, String meat, double price, String breadRollType) {
+    public Hamburger(String name, String meat, double price, BreadRollType breadRollType) {
         this.name = name;
         this.meat = meat;
         this.price = price;
         this.breadRollType = breadRollType;
     }
 
-    public Hamburger(String name, double price, String breadRollType) {
+    public Hamburger(String name, double price, BreadRollType breadRollType) {
         this.name = name;
         this.meat = "Normal";
         this.price = price;
         this.breadRollType = breadRollType;
     }
 
-    public Hamburger(String name, String meat, double price, String breadRollType, String addition1Name, double addition1Price) {
+    public Hamburger(String name, String meat, double price, BreadRollType breadRollType, String addition1Name, double addition1Price) {
         this.name = name;
         this.meat = meat;
         this.price = price;
@@ -40,7 +40,7 @@ public class Hamburger {
         this.addition1Price = addition1Price;
     }
 
-    public Hamburger(String name, String meat, double price, String breadRollType, String addition1Name, double addition1Price, String addition2Name, double addition2Price, String addition3Name, double addition3Price) {
+    public Hamburger(String name, String meat, double price, BreadRollType breadRollType, String addition1Name, double addition1Price, String addition2Name, double addition2Price, String addition3Name, double addition3Price) {
         this.name = name;
         this.meat = meat;
         this.price = price;
@@ -53,7 +53,7 @@ public class Hamburger {
         this.addition3Price = addition3Price;
     }
 
-    public Hamburger(String name, String meat, double price, String breadRollType, String addition1Name, double addition1Price, String addition2Name, double addition2Price) {
+    public Hamburger(String name, String meat, double price, BreadRollType breadRollType, String addition1Name, double addition1Price, String addition2Name, double addition2Price) {
 
         this.name = name;
         this.meat = meat;
@@ -65,12 +65,12 @@ public class Hamburger {
         this.addition2Price = addition2Price;
     }
 
-    public Hamburger(String name, String meat, double price, String breadRollType, String addition1Name, double addition1Price, String addition2Name, double addition2Price, String addition3Name, double addition3Price, String addition4Name, double addition4Price) {
+    public Hamburger(String name, String meat, double price, BreadRollType breadRollType, String addition1Name, double addition1Price, String addition2Name, double addition2Price, String addition3Name, double addition3Price, String addition4Name, double addition4Price) {
 
         this.name = name;
         this.meat = meat;
         this.price = price;
-        this.breadRollType = breadRollType;
+        this.breadRollType = (breadRollType);
         this.addition1Name = addition1Name;
         this.addition1Price = addition1Price;
         this.addition2Name = addition2Name;
@@ -93,7 +93,7 @@ public class Hamburger {
         return price;
     }
 
-    public String getBreadRollType() {
+    public BreadRollType getBreadRollType() {
         return breadRollType;
     }
 
@@ -141,7 +141,7 @@ public class Hamburger {
         this.price = price;
     }
 
-    public void setBreadRollType(String breadRollType) {
+    public void setBreadRollType(BreadRollType breadRollType) {
         this.breadRollType = breadRollType;
     }
 

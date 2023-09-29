@@ -3,7 +3,7 @@ public class DeluxeBurger extends  Hamburger{
     private String cips ;
     private String drink ;
 
-    public DeluxeBurger( String meat, double price, String breadRollType) {
+    public DeluxeBurger( String meat, double price, BreadRollType breadRollType) {
         super("DeluxeBurger", meat, price, breadRollType);
 
     }
@@ -25,7 +25,7 @@ public class DeluxeBurger extends  Hamburger{
     }
 
     public DeluxeBurger( ) {
-        super("DeluxeBurger", "Double", 19.10, "Double Sandwich");
+        super("DeluxeBurger", "Double", 19.10, BreadRollType.DOUBLE_SANDWICH);
 
 
     }

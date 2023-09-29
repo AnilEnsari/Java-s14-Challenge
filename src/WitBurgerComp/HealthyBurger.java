@@ -6,17 +6,17 @@ public class HealthyBurger extends Hamburger {
     private String healthyExtra2Name;
     private double healthyExtra2Price;
 
-    public HealthyBurger(String name, double price, String breadRollType) {
+    public HealthyBurger(String name, double price, BreadRollType breadRollType) {
         super(name, "Tofu", price, breadRollType);
     }
 
-    public HealthyBurger(String name, String meat, double price, String breadRollType, String healthyExtra1Name, double healthyExtra1Price) {
+    public HealthyBurger(String name, String meat, double price, BreadRollType breadRollType, String healthyExtra1Name, double healthyExtra1Price) {
         super(name, meat, price, breadRollType);
         this.healthyExtra1Name = healthyExtra1Name;
         this.healthyExtra1Price = healthyExtra1Price;
     }
 
-    public HealthyBurger(String name, String meat, double price, String breadRollType, String healthyExtra1Name, double healthyExtra1Price, String healthyExtra2Name, double healthyExtra2Price) {
+    public HealthyBurger(String name, String meat, double price, BreadRollType breadRollType, String healthyExtra1Name, double healthyExtra1Price, String healthyExtra2Name, double healthyExtra2Price) {
         super(name, meat, price, breadRollType);
         this.healthyExtra1Name = healthyExtra1Name;
         this.healthyExtra1Price = healthyExtra1Price;

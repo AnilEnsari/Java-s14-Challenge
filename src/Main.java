@@ -1,10 +1,11 @@
+import WitBurgerComp.BreadRollType;
 import WitBurgerComp.DeluxeBurger;
 import WitBurgerComp.Hamburger;
 import WitBurgerComp.HealthyBurger;
 
 public class Main {
     public static void main(String[] args) {
-        Hamburger hamburger = new Hamburger("Basic", 3.56, "Wrap");
+        Hamburger hamburger = new Hamburger("Basic", 3.56, BreadRollType.WRAP);
 
         hamburger.addHamburgerAddition1("Tomato", 0.27);
 
@@ -14,7 +15,7 @@ public class Main {
 
         hamburger.itemizeHamburger();
 
-        HealthyBurger healthyBurger = new HealthyBurger("Vegan Burger", 5.67, "Sandwich");
+        HealthyBurger healthyBurger = new HealthyBurger("Vegan Burger", 5.67, BreadRollType.SANDWICH);
 
         healthyBurger.addHamburgerAddition1("Egg", 5.43);
 
